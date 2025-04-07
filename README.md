@@ -24,7 +24,7 @@ For the matchup ID `2023_1218_1342`:
 
 ## 🧠 Approach
 
-This baseline model uses **seed difference as a proxy for team strength**. It assumes that teams with better (lower) seeds are more likely to win. The prediction formula is:
+This baseline model uses **seed difference as a proxy for team strength**. It assumes that teams with better (lower) seeds are more likely to win. Since the largest possible seed gap is 15 (e.g., a #1 seed vs. a #16 seed), we apply a simple linear formula: 0.5 + 0.03 × seed difference. This produces a probability range from 5% to 95%. The prediction formula is:
 
 **Predicted Probability = 0.5 + 0.03 × (Seed2 - Seed1)**
 
