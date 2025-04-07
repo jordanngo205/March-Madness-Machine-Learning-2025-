@@ -26,9 +26,7 @@ For the matchup ID `2023_1218_1342`:
 
 This baseline model uses **seed difference as a proxy for team strength**. It assumes that teams with better (lower) seeds are more likely to win. The prediction formula is:
 
-\[
-\text{Predicted Probability} = 0.5 + 0.03 \times (\text{Seed2} - \text{Seed1})
-\]
+**Predicted Probability = 0.5 + 0.03 × (Seed2 - Seed1)**
 
 - If TeamID1 is seeded better than TeamID2 → prediction > 0.5  
 - If TeamID2 is seeded better → prediction < 0.5  
@@ -49,11 +47,12 @@ This baseline model uses **seed difference as a proxy for team strength**. It as
 
 Though the true outcomes are not known at prediction time, we simulate evaluation using the **Brier Score**. This helps estimate how confident and well-calibrated the predictions are.
 
-The Brier Score is calculated as:
+**Brier Score = (1/N) × Σ (pᵢ - yᵢ)²**
 
-\[
-\frac{1}{N} \sum_{i=1}^{N} (p_i - y_i)^2
-\]
+Where:
+- `pᵢ` = predicted probability
+- `yᵢ` = actual outcome (1 if TeamID1 wins, 0 if not)
+- `N` = number of matchups
 
 A lower score indicates better predictive performance.
 
