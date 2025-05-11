@@ -1,4 +1,4 @@
-# 🏀 March Mania 2025 – Baseline Seed-Based Predictor
+# 🏀 March Madness 2025 – Baseline Seed-Based Predictor
 
 This project provides a simple seed-based model for predicting NCAA tournament matchups in the [March Machine Learning Mania 2025](https://www.kaggle.com/competitions/march-machine-learning-mania-2025/data) competition on Kaggle. It uses historical seed rankings to estimate the likelihood of one team beating another.
 
